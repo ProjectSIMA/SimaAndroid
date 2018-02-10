@@ -24,22 +24,16 @@ public class ACLActivity extends AppCompatActivity {
         addswitch.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v) {
-                switch (v.getId()) {
-
-                    case R.id.edit_fieldname:
-                        EditText edit_fieldname = findViewById(R.id.edit_fieldname);
-                        Bundle bundle = new Bundle();
-                        bundle.putString("fieldname", edit_fieldname.getText().toString());
-                        LinearLayout layout = (LinearLayout) findViewById(R.id.layout1);
-                        String switchname = edit_fieldname.getText().toString();
-                        Switch stcTag = new Switch(v.getContext());
-                        stcTag.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-                        stcTag.setText(switchname);
-                        layout.addView(stcTag);
-                        break;
+                        EditText nameText = findViewById(R.id.edit_fieldname);
+                        /*Bundle bundle = new Bundle();
+                        bundle.putString("fieldname", edit_fieldname.getText().toString());*/
+                        LinearLayout layout = findViewById(R.id.switch_container);
+                        Switch layoutSwitch = new Switch(v.getContext());
+                        layoutSwitch.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                        layoutSwitch.setText(nameText.getText());
+                        layout.addView(layoutSwitch);
                     // aggiunto lo switch e nominato
                 }
-            }
         });
     }
 }
