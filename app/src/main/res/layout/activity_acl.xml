@@ -43,7 +43,8 @@
                 android:id="@+id/edit_fieldname"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Inserire nome nuovo componente"
+                android:text=""
+                android:hint="Inserire il nome casella"
                 />
             <Button
                 android:id="@+id/button1"

@@ -23,18 +23,22 @@ public class ACLActivity extends AppCompatActivity {
         Button addswitch = findViewById(R.id.button1); //dato nome a pulsante
         addswitch.setOnClickListener(new View.OnClickListener(){
 
-            public void onClick(View arg0) {
+            public void onClick(View v) {
+                switch (v.getId()) {
 
-                EditText edit_fieldname = findViewById(R.id.edit_fieldname);
-                Bundle bundle = new Bundle();
-                bundle.putString("fieldname", edit_fieldname.getText().toString());
-                LinearLayout layout = (LinearLayout) findViewById(R.id.layout1);
-                String switchname = edit_fieldname.getText().toString();
-                Switch stcTag = new Switch(arg0.getContext());
-                stcTag.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-                stcTag.setText(switchname);
-                layout.addView(stcTag);
-                // aggiungere lo switch(Da vedere come fare ancora)
+                    case R.id.edit_fieldname:
+                        EditText edit_fieldname = findViewById(R.id.edit_fieldname);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("fieldname", edit_fieldname.getText().toString());
+                        LinearLayout layout = (LinearLayout) findViewById(R.id.layout1);
+                        String switchname = edit_fieldname.getText().toString();
+                        Switch stcTag = new Switch(v.getContext());
+                        stcTag.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                        stcTag.setText(switchname);
+                        layout.addView(stcTag);
+                        break;
+                    // aggiunto lo switch e nominato
+                }
             }
         });
     }
