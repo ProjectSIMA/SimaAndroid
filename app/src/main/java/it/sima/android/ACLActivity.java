@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 
 /**
  * Created by user on 05/02/2018.
@@ -19,18 +20,23 @@ public class ACLActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acl);
 
-        /*Button addbutton = findViewById(R.id.button1); //dato nome a pulsante
-        addbutton.setOnClickListener(new View.OnClickListener(){
+        Button addswitch = findViewById(R.id.button1); //dato nome a pulsante
+        addswitch.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View arg0) {
-                LinearLayout layout = (LinearLayout) findViewById(R.id.layout1);
-                String switchname = .getText().toString();
+
                 EditText edit_fieldname = findViewById(R.id.edit_fieldname);
                 Bundle bundle = new Bundle();
                 bundle.putString("fieldname", edit_fieldname.getText().toString());
+                LinearLayout layout = (LinearLayout) findViewById(R.id.layout1);
+                String switchname = edit_fieldname.getText().toString();
+                Switch stcTag = new Switch(arg0.getContext());
+                stcTag.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                stcTag.setText(switchname);
+                layout.addView(stcTag);
                 // aggiungere lo switch(Da vedere come fare ancora)
             }
-        });*/
+        });
     }
 }
 
