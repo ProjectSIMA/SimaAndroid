@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SimaAndroid</string>
+    <string name="fieldname">Nome Campo</string>
 </resources>
