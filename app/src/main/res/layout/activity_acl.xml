@@ -42,18 +42,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="right|bottom"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             tools:ignore="MissingConstraints">
+
             <EditText
                 android:id="@+id/edit_fieldname"
-                android:layout_width="fill_parent"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
-                android:text=""
-                android:hint="Inserire il nome casella"
-                />
+                android:hint="Inserire nome"
+                android:text="" />
+
             <Button
                 android:id="@+id/button1"
-                android:layout_width="match_parent"
+                android:layout_width="142dp"
                 android:layout_height="wrap_content"
                 android:text="Aggiungi" />
 
